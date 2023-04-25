@@ -1,0 +1,9 @@
+.DS_Store
+.project
+*.pyc
+.idea
+venv
+credentials*.json
+logging.txt
+guests.txt
+Figure 15-11.jpg
