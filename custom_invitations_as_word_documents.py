@@ -13,17 +13,13 @@ logging.basicConfig(
 # logging.disable(logging.CRITICAL)  # Note out to enable logging.
 
 
-def get_guestlist():
-    """Read contents of 'guests.txt' and return list of guests."""
-    with open("guests.txt", "r", encoding="utf-8") as f:
-        guests = f.readlines()
-        stripped_list = [guest.strip() for guest in guests]
-    return stripped_list
-
-
-def make_invitations(guests):
+def make_invitations():
     """Open styled blank docx, write invitation for
     each guest on separate page and save file."""
+
+    with open("guests.txt", "r", encoding="utf-8") as f:
+        guests = [guest.strip() for guest in f.readlines()]
+
     doc = docx.Document("template.docx")
 
     for idx, guest in enumerate(guests):
@@ -40,5 +36,9 @@ def make_invitations(guests):
     doc.save("invitations.docx")
 
 
-guest_list = get_guestlist()
-make_invitations(guest_list)
+def main():
+    make_invitations()
+
+
+if __name__ == "__main__":
+    main()

@@ -5,8 +5,6 @@
 venv
 credentials*.json
 logging.txt
-guests.txt
-Figure 15-11.jpg
 *.pages
-*.docx
 .~lock*
+invitations.docx
