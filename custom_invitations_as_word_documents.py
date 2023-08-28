@@ -1,6 +1,6 @@
-#! python3
+#!/usr/bin/env python3
 # custom_invitations_as_word_documents.py — An exercise in manipulating Word documents.
-# For more information, see project_details.txt.
+# For more information, see README.md
 
 import logging
 import docx
@@ -10,7 +10,7 @@ logging.basicConfig(
     filename="logging.txt",
     format="%(asctime)s -  %(levelname)s -  %(message)s",
 )
-# logging.disable(logging.CRITICAL)  # Note out to enable logging.
+logging.disable(logging.CRITICAL)  # Note out to enable logging.
 
 
 def make_invitations():
